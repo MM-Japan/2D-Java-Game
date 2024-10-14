@@ -14,10 +14,10 @@ import java.awt.Graphics2D;
 public class GamePanel extends JPanel implements Runnable{
 
   // SCREEN SETTINGS
-  final int originalTileSize = 32; // 16x16 tile
+  final int originalTileSize = 32; // 32x32 tile
   final int scale = 2;
 
-  public final int tileSize = originalTileSize * scale; // 48x48 tile
+  public final int tileSize = originalTileSize * scale; // 64x64 tile
   public final int maxScreenCol = 16;
   public final int maxScreenRow = 12;
   public final int screenWidth = tileSize * maxScreenCol; // 768 px
