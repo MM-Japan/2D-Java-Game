@@ -4,6 +4,7 @@ import main.KeyHandler;
 
 // import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -25,6 +26,14 @@ public class Player extends Entity{
 
     screenX = gp.screenWidth/2 - (gp.tileSize/2);
     screenY = gp.screenHeight/2 - (gp.tileSize/2);
+
+    // Adjust to effect the collision of player character with other tiles.
+
+    solidArea = new Rectangle();
+    solidArea.x = 0;
+    solidArea.y = 0;
+    solidArea.width = 48;
+    solidArea.height = 48;
 
     setDefaultValues();
     getPlayerImage();
@@ -75,6 +84,9 @@ public class Player extends Entity{
     else {
       direction = "idle";
     }
+
+    collisionOn = false;
+    gp.cChecker.checkTile(this);
 
     spriteCounter++;
     if(spriteCounter > 15) {
