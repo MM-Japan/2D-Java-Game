@@ -30,10 +30,10 @@ public class Player extends Entity{
     // Adjust to effect the collision of player character with other tiles.
 
     solidArea = new Rectangle();
-    solidArea.x = 0;
-    solidArea.y = 0;
-    solidArea.width = 48;
-    solidArea.height = 48;
+    solidArea.x = 8;
+    solidArea.y = 16;
+    solidArea.width = 32;
+    solidArea.height = 32;
 
     setDefaultValues();
     getPlayerImage();
