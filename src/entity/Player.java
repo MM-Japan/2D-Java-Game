@@ -43,8 +43,8 @@ public class Player extends Entity{
   }
 
   public void setDefaultValues() {
-    worldX = gp.tileSize * 3;
-    worldY = gp.tileSize * 3;
+    worldX = gp.tileSize * 29;
+    worldY = gp.tileSize * 46;
     speed = 4;
     direction = "down";
   }
@@ -147,6 +147,10 @@ public class Player extends Entity{
               hasKey--;
               System.out.println("Key:"+hasKey);
             }
+            break;
+          case "Boots":
+            speed += 2;
+            gp.obj[i] = null;
             break;
         }
       }
